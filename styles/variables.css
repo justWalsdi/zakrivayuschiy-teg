@@ -1,1 +1,11 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --accent-font: PressStart2P;
+  --content-font: Inter;
+  --content-header-weight: 785;
+  --content-parapgraph-weight: 465;
+  --background-color: #000;
+  --accent-color: #00cc14;
+  --background-pattern: url(./../svg/pattern-dark.svg);
+  --background-fill-color: var(--accent-color);
+  --heart-fill-color: red;
+}

@@ -1,6 +1,41 @@
-/* В этом файле вы опишете значения переменных в разных цветовых схемах.
-Придерживайтесь такого именования классов:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
-*/
+:root .theme-dark {
+  --accent-font: PressStart2P, monospace;
+  --content-font: Inter, sans-serif;
+  --content-header-weight: 785;
+  --content-parapgraph-weight: 465;
+  --background-color: #000;
+  --accent-color: #00cc14;
+  --background-pattern: url(./../svg/pattern-dark.svg);
+  --background-fill-color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --content-header-weight: 785;
+    --content-parapgraph-weight: 465;
+    --background-color: #000;
+    --accent-color: #00cc14;
+    --background-pattern: url(./../svg/pattern-dark.svg);
+    --background-fill-color: var(--accent-color);
+  }
+}
+
+:root .theme-light {
+  --content-header-weight: 700;
+  --content-paragraph-weight: 400;
+  --background-color: #fff;
+  --accent-color: #000;
+  --background-pattern: url(./../svg/pattern-light.svg);
+  --background-fill-color: #000;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --content-header-weight: 700;
+    --content-paragraph-weight: 400;
+    --background-color: #fff;
+    --accent-color: #000;
+    --background-pattern: url(./../svg/pattern-light.svg);
+    --background-fill-color: #000;
+  }
+}
