@@ -17,8 +17,7 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: sans-serif;
-  font-family: var(--content-font);
+  font-family: var(--content-font, sans-serif);
   font-variation-settings: "wght" var(--content-parapgraph-weight);
   background-image: var(--background-pattern);
   background-position: top left;
@@ -235,15 +234,12 @@
 
 .button-animation:focus {
   outline: none;
+  box-shadow: 2px 2px 0 currentColor;
 }
 
 .button-animation:focus-visible {
   outline: 1px solid currentColor;
   outline-offset: 4px;
-}
-
-.button-animation:focus {
-  box-shadow: 2px 2px 0 currentColor;
 }
 
 .footer {
