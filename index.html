@@ -7,9 +7,10 @@
     <meta
       name="description"
       content="Рассказ о пути студента курса вёрстки в Яндекс Практикум."
-  >
+   >
     <link rel="icon" href="./images/favicon.ico" sizes="any">
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/variables.css">
@@ -55,8 +56,9 @@
           </h2>
           <img
             class="card__image"
-            src="./images/sprint-1-card.png"
+            src="./images/sprint-1/card.png"
             alt="Автобус в лесной местности рядом с костром."
+            loading="lazy"
           >
           <div class="card__content">
             <div class="card__text">
@@ -68,13 +70,14 @@
               <p>Место для ваших воспоминаний о начале обучения.</p>
             </div>
             <div class="card__like-container">
-              <button class="card__icon-button">
+              <button type="button" class="card__icon-button">
                 <svg
                   class="like-icon"
                   xmlns="http://www.w3.org/2000/svg"
                   width="39"
                   height="36"
                   viewBox="0 0 39 36"
+                  aria-hidden="true"
                 >
                   <g clip-path="url(#a)">
                     <g class="heart">
@@ -109,22 +112,20 @@
                   </g>
                 </svg>
               </button>
-              <button class="card__like-button button-animation">
+              <button type="button" class="card__like-button button-animation">
                 <span class="button__text"> Like </span>
               </button>
             </div>
           </div>
         </article>
+        <button type="button" class="cards_save-button button-animation">
+          <svg class="save__buton-icon">
+            <use href="./svg/floppy.svg#floppy" />
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
       </section>
     </main>
-    <footer class="section-content footer">
-      <button class="footer_save-button button-animation">
-        <svg class="save__buton-icon">
-          <use href="./svg/floppy.svg#floppy" />
-        </svg>
-        <span class="button__text">Сохранить на память</span>
-      </button>
-    </footer>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>
   </body>
