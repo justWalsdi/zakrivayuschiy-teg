@@ -1,5 +1,4 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
-
+/* 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
@@ -9,6 +8,89 @@
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+.like-icon .core {
+  fill: transparent;
+  transition: fill linear 0.3s 0.03s;
+}
+
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill linear 0.3s;
+}
+
+.like-icon:hover .core {
+  fill: var(--accent-color);
+  transition: fill linear 0.3s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill linear 0.3s 0.05s;
+}
+
+.like-icon:active .core {
+  fill: var(--heart-fill-color);
+  transition: fill linear 0.3s;
+}
+
+.like-icon:active .main-body {
+  fill: var(--heart-fill-color);
+  transition: fill linear 0.3s 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--heart-fill-color);
+  transition: fill linear 0.3s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--heart-fill-color);
+  transition: fill linear 0.3s 0.06s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--heart-fill-color);
+  transition: fill linear 0.3s 0.12s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center center;
+  animation: bigger ease-in 0.3s 0.1s;
+  animation-direction: alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: salute ease-in 0.3s 0.3s;
+}
+
+@keyframes bigger {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes salute {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    margin-inline-start: -2em;
+  }
+
+  100% {
+    margin-inline-start: -1.42em;
+  }
+}
