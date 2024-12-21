@@ -270,10 +270,6 @@
   transition: box-shadow ease 0.3s;
 }
 
-.button__text {
-  mix-blend-mode: difference;
-}
-
 .button-animation::before {
   transition: transform ease-in-out 0.5s;
   left: 0;
@@ -385,5 +381,6 @@
 
 .button__text {
   text-wrap: nowrap;
+  mix-blend-mode: difference;
   z-index: 1;
 }
