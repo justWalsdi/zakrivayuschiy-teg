@@ -1,41 +1,109 @@
-:root .theme-dark {
+.theme-dark {
   --accent-font: PressStart2P, monospace;
   --content-font: Inter, sans-serif;
   --content-header-weight: 785;
   --content-paragraph-weight: 465;
   --background-color: #000;
   --accent-color: #00cc14;
-  --background-pattern: url(./../svg/pattern-dark.svg);
   --background-fill-color: var(--accent-color);
+  --button-text-color: var(--accent-color);
+  --gradient-background: #000;
+  --gradient-start: #007f0c;
+  --gradient-end: #004306;
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 2px,
+      var(--gradient-background) 2px,
+      var(--gradient-background) 4px
+    ),
+    repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      var(--gradient-background) 2px,
+      var(--gradient-background) 4px
+    ),
+    linear-gradient(var(--gradient-start), var(--gradient-end));
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  .theme-auto {
     --content-header-weight: 785;
     --content-paragraph-weight: 465;
     --background-color: #000;
     --accent-color: #00cc14;
-    --background-pattern: url(./../svg/pattern-dark.svg);
     --background-fill-color: var(--accent-color);
+    --button-text-color: var(--accent-color);
+    --gradient-background: #000;
+    --gradient-start: #007f0c;
+    --gradient-end: #004306;
+    --background-gradient: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 2px,
+        var(--gradient-background) 2px,
+        var(--gradient-background) 4px
+      ),
+      repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        var(--gradient-background) 2px,
+        var(--gradient-background) 4px
+      ),
+      linear-gradient(var(--gradient-start), var(--gradient-end));
   }
 }
 
-:root .theme-light {
+.theme-light {
   --content-header-weight: 700;
   --content-paragraph-weight: 400;
   --background-color: #fff;
   --accent-color: #000;
-  --background-pattern: url(./../svg/pattern-light.svg);
   --background-fill-color: #000;
+  --gradient-background: #d3d3d3;
+  --gradient-start: #e7e7e7;
+  --gradient-end: #1a1a1a;
+  --button-text-color: var(--background-color);
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 2px,
+      var(--gradient-background) 2px,
+      var(--gradient-background) 4px
+    ),
+    repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      var(--gradient-background) 2px,
+      var(--gradient-background) 4px
+    ),
+    linear-gradient(var(--gradient-start), var(--gradient-end));
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  .theme-auto {
     --content-header-weight: 700;
     --content-paragraph-weight: 400;
     --background-color: #fff;
     --accent-color: #000;
-    --background-pattern: url(./../svg/pattern-light.svg);
     --background-fill-color: #000;
+    --gradient-background: #d3d3d3;
+    --gradient-start: #e7e7e7;
+    --gradient-end: #1a1a1a;
+    --button-text-color: var(--background-color);
+    --background-gradient: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 2px,
+        var(--gradient-background) 2px,
+        var(--gradient-background) 4px
+      ),
+      repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        var(--gradient-background) 2px,
+        var(--gradient-background) 4px
+      ),
+      linear-gradient(var(--gradient-start), var(--gradient-end));
   }
 }

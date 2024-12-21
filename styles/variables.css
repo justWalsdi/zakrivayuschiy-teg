@@ -1,11 +1,28 @@
 :root {
   --accent-font: PressStart2P;
-  --content-font: Inter;
+  --content-font: Inter, sans-serif;
   --content-header-weight: 785;
   --content-paragraph-weight: 465;
   --background-color: #000;
   --accent-color: #00cc14;
-  --background-pattern: url(./../svg/pattern-dark.svg);
   --background-fill-color: var(--accent-color);
   --heart-fill-color: red;
+  --button-text-color: var(--accent-color);
+  --gradient-background: #000;
+  --gradient-start: #007f0c;
+  --gradient-end: #004306;
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 2px,
+      var(--gradient-background) 2px,
+      var(--gradient-background) 4px
+    ),
+    repeating-linear-gradient(
+      transparent,
+      transparent 2px,
+      var(--gradient-background) 2px,
+      var(--gradient-background) 4px
+    ),
+    linear-gradient(var(--gradient-start), var(--gradient-end));
 }
