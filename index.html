@@ -59,7 +59,7 @@
               <img
                 class="card__image filter-darken-saturated"
                 src="./images/sprint-0/card.jpg"
-                alt="Зимний лес ночью, вывеска 'Welcome to Twin Peaks'"
+                alt="Зимний лес ночью, вывеска 'Welcome to Twin Peaks'."
                 loading="lazy"
               />
             </div>
@@ -203,7 +203,7 @@
             <div class="card__image-decoration">
               <img
                 class="card__image filter-darken-contrast"
-                alt="Кот сидит на столе"
+                alt="Кот сидит на столе."
                 src="./images/sprint-1/card-2.jpg"
                 loading="lazy"
               />
@@ -273,7 +273,7 @@
                 class="card__image filter-partial-grayscale-brighten"
                 src="./images/sprint-2/card-1.jpg"
                 loading="lazy"
-                alt="Поток с машин, одна из них это электробус с подписью '450-й Электробус'"
+                alt="Поток машин, среди них электробус с подписью '450-й Электробус'."
               />
             </div>
             <span class="card__label">&lt;Перфекционизм&gt;</span>
@@ -343,7 +343,7 @@
                 class="card__image filter-grayscale"
                 src="./images/sprint-2/card-2.jpg"
                 loading="lazy"
-                alt="Изображение маяка"
+                alt="Маяк."
               />
             </div>
             <span class="card__label">&lt;hope&gt;</span>
@@ -415,7 +415,7 @@
               <img
                 class="card__image filter-partial-invert"
                 src="./images/sprint-3/card-1.jpg"
-                alt="Вышка с проводами электричества"
+                alt="Вышка с проводами электричества."
                 loading="lazy"
               />
             </div>
@@ -486,7 +486,7 @@
                 class="card__image filter-low-saturation-with-blur"
                 src="./images/sprint-3/card-2.jpg"
                 loading="lazy"
-                alt="Дорога, окружённая деревьями"
+                alt="Дорога, окружённая деревьями."
               />
             </div>
             <span class="card__label">Inner fire</span>
@@ -558,7 +558,7 @@
                 class="card__image filter-lighten-saturated"
                 src="./images/sprint-current/card.jpg"
                 loading="lazy"
-                alt="Три здания на фоне облаков, закат"
+                alt="Три жилых строения на фоне облаков, закат."
               />
             </div>
             <span class="card__label">&lt;experience&gt;</span>
@@ -622,21 +622,7 @@
             </div>
           </div>
         </article>
-        <dialog id="dialog" class="dialog">
-          <div class="dialog__info-container">
-            <svg class="dialog__button-icon">
-              <use href="./svg/floppy.svg#floppy" />
-            </svg>
-            <span class="dialog__text">Вставьте дискету, чтобы продолжить</span>
-          </div>
-          <button
-            type="button"
-            class="dialog_button button-animation"
-            onclick="window['dialog'].close()"
-          >
-            <span class="dialog_button__text"> OK </span>
-          </button>
-        </dialog>
+
         <button
           type="button"
           class="cards_save-button button-animation"
@@ -650,6 +636,19 @@
         </button>
       </section>
     </main>
+    <dialog id="dialog" class="dialog">
+      <form method="dialog" class="dialog__form">
+        <div class="dialog__info-container">
+          <svg class="dialog__button-icon">
+            <use href="./svg/floppy.svg#floppy" />
+          </svg>
+          <p class="dialog__text">Вставьте дискету,&nbsp;чтобы продолжить</p>
+        </div>
+        <button type="submit" class="dialog_button button-animation">
+          <span class="dialog_button__text"> OK </span>
+        </button>
+      </form>
+    </dialog>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>
   </body>

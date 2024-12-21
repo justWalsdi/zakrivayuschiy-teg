@@ -27,7 +27,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .theme-auto {
+  :root {
     --content-header-weight: 785;
     --content-paragraph-weight: 465;
     --background-color: #000;
@@ -81,7 +81,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .theme-auto {
+  :root {
     --content-header-weight: 700;
     --content-paragraph-weight: 400;
     --background-color: #fff;

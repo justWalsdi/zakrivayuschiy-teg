@@ -19,10 +19,11 @@
   min-block-size: 100dvb;
   font-family: var(--content-font), sans-serif;
   font-variation-settings: "wght" var(--content-paragraph-weight);
+  background: fixed;
   background-image: var(--background-gradient);
   background-size: cover;
-  background-color: var(--background-color);
-  color: var(--accent-color);
+  background-color: var(--background-color, #000);
+  color: var(--accent-color, #00cc14);
 }
 
 .section-content {
@@ -42,7 +43,7 @@
   align-items: center;
   padding: min(32vi, 135px) 0 20px;
   font-size: 14px;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #000);
 }
 
 .header__logo {
@@ -125,11 +126,11 @@
 .card {
   border: 2px solid currentColor;
   line-height: 21px;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #000);
 }
 
 .card__title {
-  font-variation-settings: "wght" var(--content-header-weight);
+  font-variation-settings: "wght" var(--content-header-weight, 785);
   font-size: 18px;
   padding: 3px 10px;
   border-bottom: 2px solid currentColor;
@@ -185,12 +186,12 @@
 }
 
 .card__label {
-  line-height: 1;
+  line-height: normal;
   position: absolute;
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   right: min(13px, 1.73%);
-  top: 25px;
-  font-size: 14px;
+  top: 21px;
+  font-size: 15px;
   font-weight: var(--content-header-weight);
   opacity: 50%;
   mix-blend-mode: hard-light;
@@ -198,13 +199,20 @@
     1px 0 var(--background-color), 0 -1px var(--background-color);
 }
 
+@media (width >= 1440px) {
+  .card__label {
+    top: 25px;
+    font-size: 16px;
+  }
+}
+
 @supports (
   (text-stroke: 1px var(--background-color)) or
     (-webkit-text-stroke: 1px var(--background-color))
 ) {
   .card__label {
-    -webkit-text-stroke: 0.04rem var(--background-color);
-    text-stroke: 1px var(--background-color);
+    -webkit-text-stroke: 0.04rem var(--background-color, #000);
+    text-stroke: 1px var(--background-color, #000);
     text-shadow: none;
   }
 }
@@ -256,17 +264,17 @@
 .card__like-button {
   display: flex;
   cursor: pointer;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #00cc14);
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   padding: 10px 35px;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #000);
 }
 
 .button-animation {
   position: relative;
   overflow: hidden;
-  color: var(--button-text-color);
+  color: var(--button-text-color, #00cc14);
   transition: box-shadow ease 0.3s;
 }
 
@@ -276,7 +284,7 @@
   top: 0;
   content: "";
   position: absolute;
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #000);
   width: 100%;
   height: 100%;
   transform: translate(-100%);
@@ -288,7 +296,7 @@
 
 .button-animation:focus {
   outline: none;
-  box-shadow: 2px 2px 0 var(--accent-color);
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
 }
 
 .cards_save-button {
@@ -299,61 +307,71 @@
   flex-wrap: wrap;
   font-size: 14px;
   font-family: var(--accent-font), fantasy;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #00cc14);
   padding: 15px 20px;
   margin-block: 0;
   margin-inline: 9vi;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #000);
   max-width: fit-content;
   gap: 8px;
 }
 
-.dialog:not([open]) {
-  pointer-events: none;
-  opacity: 0;
-}
-.dialog[open] {
-  opacity: 1;
-}
-.dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.75);
-  backdrop-filter: blur(2px);
+@media (width >= 1440px) {
+  .cards_save-button {
+    padding: 12px 18px;
+  }
+  .save__buton-icon {
+    width: 22px;
+    height: 25px;
+  }
 }
 
-.dialog {
-  transition: opacity 0.3s ease;
-  border-width: 2px;
-  background-color: var(--background-color);
-  color: var(--accent-color);
+.dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__form {
   display: flex;
   flex-direction: column;
-  max-width: 357px;
-  width: min(347px, 100%);
   gap: 30px;
-  font-family: var(--accent-font);
+}
+
+.dialog[open] {
+  border-width: 2px;
+  background-color: var(--background-color, #000);
+  color: var(--accent-color, #00cc14);
+  max-width: 357px;
+  width: min(342px, 100%);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
-  padding-inline: 30px;
+  padding-inline: 42px;
   padding-block: 30px;
+}
+
+@media (width >= 1440px) {
+  .dialog[open] {
+    padding-inline: 30px;
+  }
 }
 
 .dialog_button {
   display: flex;
   cursor: pointer;
-  border: 2px solid var(--accent-color);
+  border: 2px solid var(--accent-color, #00cc14);
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
   padding: 10px 35px;
-  background-color: var(--background-color);
+  background-color: var(--background-color, #000);
 }
 
 .dialog__button-icon {
-  width: 71px;
+  width: 86px;
   height: 39px;
   z-index: 1;
 }
 
 .dialog__text {
-  color: var(--accent-color);
+  color: var(--accent-color, #00cc14);
   text-transform: uppercase;
   font-size: 14px;
   line-height: 21px;
@@ -373,7 +391,7 @@
 }
 
 .dialog_button__text {
-  color: var(--button-text-color);
+  color: var(--button-text-color, #00cc14);
   mix-blend-mode: difference;
   text-align: center;
   width: 100%;
